@@ -16,7 +16,7 @@ public class ExtractEmailControlller {
     }
 
     //http://localhost:8080/extractEmail-1.0-SNAPSHOT/emai/parse?
-    @RequestMapping(value = "parse", method = RequestMethod.GET)
+    @RequestMapping(value = "parse", produces = "application/json", method = RequestMethod.GET)
     @ResponseBody ()
     public List<String> matchString(String s) {
         return ExtractEmail.matchString(s);
